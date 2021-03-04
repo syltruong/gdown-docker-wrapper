@@ -21,6 +21,16 @@ download:
 	docker run \
     	-v $(PWD)/data:/home/${USER}/data \
     	-u $(shell id -u):$(shell id -g) \
+		--rm \
 		$(IMAGE_NAME) \
     	bash -c "cd /home/${USER}/data && gdown $(URL)"
-	
+
+.PHONY: shell
+shell:
+	docker run \
+    	-v $(PWD)/data:/home/${USER}/data \
+    	-u $(shell id -u):$(shell id -g) \
+		--rm \
+		-it \
+		$(IMAGE_NAME) \
+    	bash
