@@ -1,6 +1,6 @@
 # Download files from Google Drive via the command line
 
-This is to help you download files from Google Drive on anya system that has `docker` installed.
+This is to help you download files from Google Drive on any system that has `docker` installed.
 
 It makes use of [`gdown`](https://pypi.org/project/gdown/) but is packaged in a container.
 
